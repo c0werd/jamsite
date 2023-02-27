@@ -7,29 +7,38 @@ main {
   background-color: #F5F5DC;
 }
 
-#nav-toggle {
+#navstuff {
   height: 5rem;
   width: 5rem;
   position: fixed;
-  z-index: 3;
   right: 5rem;
   top: 2rem;
   transform: translateX(50%);
+  z-index: -1;
+}
+
+#nav-toggle {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
   background-color: #FFB6C1;
   border: none;
   border-radius: 5rem;
   outline: none;
-  box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.35);
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform, background-color;
   transition-timing-function: ease;
   transition-duration: 400ms;
+  display: flex;
+  align-items: center;
 }
 #nav-toggle:hover {
-  transform: translateX(50%) scale(1.1);
+  transform: scale(1.1);
 }
 #nav-toggle:active {
-  transform: translateX(50%) scale(0.9);
+  transform: scale(0.9);
 }
 
 #nav-toggle > h1 {
@@ -41,7 +50,7 @@ main {
   font-family: "Montserrat";
   font-size: 2.5rem;
   color: #fff;
-  transition: transform, opacity;
+  transition: opacity;
   transition-timing-function: ease;
   transition-duration: 400ms;
   transform-origin: left top;
@@ -83,10 +92,10 @@ body:not([data-nav=true]) #openIcon {
   opacity: 0;
 }
 
-body:not([data-nav=true]) > #nav-toggle:hover #openIcon {
+body:not([data-nav=true]) #nav-toggle:hover #openIcon {
   opacity: 1;
 }
-body:not([data-nav=true]) > #nav-toggle:hover #closedIcon {
+body:not([data-nav=true]) #nav-toggle:hover #closedIcon {
   opacity: 0;
 }
 
@@ -103,4 +112,53 @@ body:not([data-nav=false]) #closedIcon {
 
 .deactivate {
   animation: unspinny 0.75s;
+}
+
+#nav-bar {
+  position: absolute;
+  z-index: 0;
+  position: absolute;
+  height: 50%;
+  width: 1000%;
+  left: -1000%;
+  transform: translateY(50%);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #FFB6C1;
+  transition: all ease 250ms;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+a:visited {
+  color: #FFB6C1;
+}
+a:hover {
+  color: #fff;
+}
+
+#nav-bar ul {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#nav-bar li {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
