@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Montserrat:wght@100;600&display=swap");
+body,
+main {
+  height: 100vh;
+  width: 100vh;
+  margin: 0px;
+  background-color: #F5F5DC;
+}
+
+#nav-toggle {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  z-index: 3;
+  right: 5rem;
+  top: 2rem;
+  transform: translateX(50%);
+  background-color: #FFB6C1;
+  border: none;
+  border-radius: 5rem;
+  outline: none;
+  box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform, background-color;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+}
+#nav-toggle:hover {
+  transform: translateX(50%) scale(1.1);
+}
+#nav-toggle:active {
+  transform: translateX(50%) scale(0.9);
+}
+
+#nav-toggle > h1 {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  color: #fff;
+  transition: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 400ms;
+  transform-origin: left top;
+  text-align: center;
+}
+
+@keyframes spinny {
+  0% {
+    rotate: 0deg;
+    animation-timing-function: ease;
+  }
+  50% {
+    rotate: 385deg;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    rotate: 360deg;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes unspinny {
+  0% {
+    rotate: 0deg;
+    animation-timing-function: ease;
+  }
+  50% {
+    rotate: -385deg;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    rotate: -360deg;
+    animation-timing-function: ease-out;
+  }
+}
+body:not([data-nav=true]) #closedIcon {
+  opacity: 1;
+}
+body:not([data-nav=true]) #openIcon {
+  opacity: 0;
+}
+
+body:not([data-nav=true]) > #nav-toggle:hover #openIcon {
+  opacity: 1;
+}
+body:not([data-nav=true]) > #nav-toggle:hover #closedIcon {
+  opacity: 0;
+}
+
+body:not([data-nav=false]) #openIcon {
+  opacity: 1;
+}
+body:not([data-nav=false]) #closedIcon {
+  opacity: 0;
+}
+
+.activate {
+  animation: spinny 0.75s;
+}
+
+.deactivate {
+  animation: unspinny 0.75s;
+}/*# sourceMappingURL=style.css.map */
