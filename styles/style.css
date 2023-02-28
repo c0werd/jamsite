@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Montserrat:wght@100;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Montserrat:wght@100;300;600");
 html {
   overflow-y: hidden;
 }
@@ -11,13 +11,37 @@ main {
   background-color: #F5F5DC;
 }
 
+header {
+  width: 100vw;
+  height: 10vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#logo h2 {
+  font-family: "Montserrat";
+  font-weight: 300 !important;
+  font-size: 50px;
+  color: #FFB6C1;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+#logo h2:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
 #navstuff {
   height: 5rem;
   width: 5rem;
-  position: fixed;
-  right: 5rem;
-  top: 2rem;
-  transform: translateX(50%);
+  position: relative;
 }
 
 #nav-toggle {
