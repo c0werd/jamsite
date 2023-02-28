@@ -214,7 +214,7 @@ body:not([data-nav="false"]) {
     animation: unspinny 0.75s;
 }
 
-a {
+button {
     text-decoration: none;
     color: $primary-color;
     transition: all ease 250ms;
@@ -223,7 +223,10 @@ a {
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
-
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
     &:visited {
         color: $primary-color;
     }
@@ -241,7 +244,7 @@ a {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #nav-bar li {

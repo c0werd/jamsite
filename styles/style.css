@@ -181,7 +181,7 @@ body:not([data-nav=false]) .nav-item > .nav-letter:nth-child(8) {
   animation: unspinny 0.75s;
 }
 
-a {
+button {
   text-decoration: none;
   color: #FFB6C1;
   transition: all ease 250ms;
@@ -190,11 +190,15 @@ a {
   font-size: 1.5rem;
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }
-a:visited {
+button:visited {
   color: #FFB6C1;
 }
-a:hover {
+button:hover {
   color: #fff;
 }
 
@@ -206,7 +210,7 @@ a:hover {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #nav-bar li {
